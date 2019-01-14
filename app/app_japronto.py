@@ -3,7 +3,7 @@ import asyncio
 # https://github.com/squeaky-pl/japronto
 from japronto import Application
 
-from urlmeta import async_get, sync_parse, async_parse 
+from urlmeta import async_get, sync_parse, async_parse
 
 
 # This is a synchronous handler.

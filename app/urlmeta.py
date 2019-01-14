@@ -1,7 +1,7 @@
 import aiohttp
 import asyncio
 from selectolax.parser import HTMLParser 
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ProcessPoolExecutor
 
 metadata_rules = {
   "description": {
@@ -62,7 +62,7 @@ def sync_parse(html):
     return meta
 
 async def async_parse(html):
-    executor = ThreadPoolExecutor()
+    executor = ProcessPoolExecutor()
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(executor, sync_parse, html)
 
