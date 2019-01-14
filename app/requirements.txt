@@ -1,0 +1,5 @@
+uvloop
+japronto
+selectolax
+aiohttp
+sanic
