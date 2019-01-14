@@ -4,6 +4,8 @@ Similar node.js service is [here](https://github.com/serebrov/urlmeta-nodejs).
 
 The docker-based setup can be launched with `make up`, performance tests (using ApacheBench) - with `make ab-sanic` and `make ab-japronto`.
 
+Without docker: run `python app/app_sanic.py` and `python app/app_japronto.py` appropriately.
+
 Curl examples:
 
 ```
