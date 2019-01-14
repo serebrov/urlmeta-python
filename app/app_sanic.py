@@ -10,7 +10,7 @@ app = Sanic()
 
 @app.route('/url-parser')
 async def urlparser(request):
-    url = 'https://www.nytimes.com/2018/10/01/opinion/justice-kavanaugh-recuse-himself.html'
+    url = request.args['target'][0]
     html = await async_get(url)
     # meta = await async_parse(html)
     meta = sync_parse(html)
