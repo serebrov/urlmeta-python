@@ -6,8 +6,8 @@ services:
             context: app
             dockerfile: Dockerfile
         ports:
-            - "8080:8080"
-        command: python app_sanic.py
+            - "8000:8000"
+        command: python /app/app_sanic.py
         volumes:
             - ./app:/app
 
@@ -16,7 +16,7 @@ services:
             context: app
             dockerfile: Dockerfile
         ports:
-            - "8000:8000"
-        command: python app_japronto.py
+            - "8080:8080"
+        command: python /app/app_japronto.py
         volumes:
             - ./app:/app

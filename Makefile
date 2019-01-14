@@ -2,10 +2,10 @@ up:
 	docker-compose up --build
 
 ab-sanic:
-	 ab -n 1000 -c 50 http://localhost:8080/url-parser\?target\=https://www.nytimes.com/2018/10/01/opinion/justice-kavanaugh-recuse-himself.html
+	 ab -n 1000 -c 50 http://localhost:8000/url-parser\?target\=https://www.nytimes.com/2018/10/01/opinion/justice-kavanaugh-recuse-himself.html
 
 ab-japronoto:
-	 ab -n 1000 -c 50 http://localhost:8000/url-parser\?target\=https://www.nytimes.com/2018/10/01/opinion/justice-kavanaugh-recuse-himself.html
+	 ab -n 1000 -c 50 http://localhost:8080/url-parser\?target\=https://www.nytimes.com/2018/10/01/opinion/justice-kavanaugh-recuse-himself.html
 
 # Setup venv locally (no docker)
 venv:
